@@ -9,10 +9,36 @@
 let n = 10;
 
 function sumTillNum(num){
-	return num;
+	let sum = 0;
+	for (i = 0; i <= num; i++) {
+		sum = sum + i;
+	}
+	return sum;
 	//your code here
 }
-for (i = 0; i <= 10; i++) {
-		
+
+/* YOGI VERSION 
+function sumTillNumForLoop(number) {
+	for (let counter = 0, sum = 0 ; counter <= number ; counter = counter + 1) {
+		sum = sum + counter;
+		if (counter === number) {
+			return sum;
+		}
 	}
+	return sum;
+}
+*/
+/*
+function sumTillNumForLoop(number) {
+	for (let counter = 0, sum = 0 ; counter <= number ; counter = counter + 1) {
+		sum += counter;
+		if (counter === number) {
+			return sum;
+		}
+	}
+	return sum;
+}
+*/
+
+
 console.log("Sum from 0 to " + n + " is: " + sumTillNum(n));

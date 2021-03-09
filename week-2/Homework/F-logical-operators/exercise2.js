@@ -8,13 +8,13 @@
 function isNegative(num) {
   if (num < 0) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
+  
 }
 
 function isBetween5and10(num) {
-  if (5 < num <10) {
+  if (5 < num && num < 10) {
     return true;
   } else {
     return false;
@@ -30,7 +30,23 @@ function isShortName(name) {
 }
 
 function startsWithD(name) {
-  if (name.startsWith = "D") {
+  if (name.charAt(0) === 'D') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function startsWithD(name) {
+  if (name.startsWith('D')) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function startsWithD(name) {
+  if (name[0] === 'D') {
     return true;
   } else {
     return false;

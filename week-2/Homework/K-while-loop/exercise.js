@@ -10,10 +10,17 @@ let n = 10;
 
 
 function sumTillNum(num){
-	while (num <= 10) {
-		num += 1; //your code here
+	let sum = 0;
+	let counter = 0;
+	while (counter <= n) {
+		sum = sum + counter;
+		console.log('sum: ', sum, 'counter: ', counter, 'num: ', num);
+		counter = counter + 1;
+	}
+	return sum;
 }
-}
+
+
 
 console.log("Sum from 0 to " + n + " is: " + sumTillNum(n));
 
