@@ -5,10 +5,13 @@
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-
-const studentsInGroup = group.filter((person) => students.includes(person));
+/* .filter creates a new array filtering only the elements that meet the criteria of a function */
+const studentsInGroup = group.filter((person) => {
+  return students.includes(person);
+  });
 console.log(studentsInGroup);
 
+/* .every checks IF every element meets the criteria of a function */
 var groupIsOnlyStudents = group.every((person) => students.includes(person)); // complete this statement
 
 
@@ -31,3 +34,32 @@ if (groupIsOnlyStudents) {
 /* EXPECTED RESULT */
 
 // The group does not contain only students
+
+
+/***** ADDITIONAL PRACTICE *****/
+
+/*** Filter names that start with "O" ***/
+
+/* Variable with a nested function */
+const studentStartsWithO = students.filter( function thisIsMyName (name) {
+  return name.startsWith("O")});
+
+/* Function first format */
+function thisIsMyName(name) {
+  return name.startsWith("O");
+}
+const studentStartsWithO = students.filter(thisIsMyName);
+
+console.log(studentStartsWithO)
+
+
+/* filter names that end with i */
+var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
+
+const nameEndsWithi = students.filter((name) => name.endsWith("i"));
+
+console.log(nameEndsWithi);
+
+/* Taking the last position of the name */
+
+console.log(students[2].charAt(students[2].length - 1));
